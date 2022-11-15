@@ -42,7 +42,7 @@ export default function Home() {
   // メタマスク開く IPhone 
   function openIPhoneApp(){
     try{
-      window.location.href = "metamask-blockchain-wallet://"
+      window.location.href = "metamask://"
     } catch {
       alert("please metamask install");
       window.location.href = "https://apps.apple.com/jp/app/metamask-blockchain-wallet/id1438144202"
@@ -59,7 +59,7 @@ export default function Home() {
           <input type="url" value={minturl} placeholder="URL" readOnly ref={urlInputRef} onClick={copyTextToClipboard} className="px3 py-1 text-base text-black ease-in-out border border-transparent bg-[#02f201] focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" />
         </div>
         <button><Image className="" src="/Android.png" alt="Main Image" onClick={openAndroidApp} width={500} height={500}/></button>
-        <button><Image className="min-w-full" src="/apple.png" alt="Main Image" width={500} height={500}/></button>
+        <button><Image className="min-w-full" src="/apple.png" alt="Main Image" onClick={openIPhoneApp} width={500} height={500}/></button>
       </div>
     </div>
   )
