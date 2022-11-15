@@ -32,7 +32,7 @@ export default function Home() {
   // メタマスク開く Android
   function openAndroidApp(){
     try{
-      window.location.href = "io.metamask://"
+      window.location.href = "metamask://"
     } catch {
       alert("please metamask install");
       window.location.href = "https://play.google.com/store/apps/details?id=io.metamask&hl=ja&gl=US"
