@@ -17,7 +17,7 @@ export default function Home() {
     // 入力されたURLを取得
     console.log("urlInputRef=" + urlInputRef.current.value);
 
-    const url = '/metamaskOpen?url=' + urlInputRef.current.value // URLの指定ができます。
+    const url = 'https://nft-mint-roan.vercel.app/metamaskOpen?url=' + urlInputRef.current.value // URLの指定ができます。
     const width = 300                // widthの指定ができます。
     QRCode.toDataURL(url, { width: width })
       .then(code => {
